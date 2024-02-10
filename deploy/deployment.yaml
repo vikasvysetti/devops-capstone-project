@@ -39,5 +39,11 @@ spec:
               secretKeyRef:
                 name: postgresql
                 key: database-user
-        
+
+spec:
+  template:
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/sb-labs-vikasvysetti/accounts:latest
+        name: accounts     
 status: {}
